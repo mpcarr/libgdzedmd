@@ -1,0 +1,5 @@
+build
+*.log
+*.dblite
+gd_zedmd/libzedmd
+*.obj
