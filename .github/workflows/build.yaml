@@ -27,7 +27,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: godot-cpp/bin
-        key: godot-cpp-${{ runner.os }}-${{ hashFiles('godot-cpp/SConstruct') }}
+        key: godot-cpp-${{ runner.os }}-v1
         restore-keys: godot-cpp-${{ runner.os }}-
 
     - name: Build Godot C++ Bindings
