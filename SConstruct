@@ -13,10 +13,10 @@ env = SConscript("godot-cpp/SConstruct")
 # - LINKFLAGS are for linking flags
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.
-env.Append(CPPPATH=["gd_zedmd/", "gd_zedmd/libzedmd/third-party/include", "gd_zedmd/libzedmd/third-party/include/miniz"])
-env.Append(LIBS=["gd_zedmd/libzedmd/third-party/build-libs/win/x64/libserialport64.lib", "ws2_32"])
+env.Append(CPPPATH=["gd_zedmd/", "libzedmd/third-party/include", "libzedmd/third-party/include/miniz"])
+env.Append(LIBS=["libzedmd/third-party/build-libs/win/x64/libserialport64.lib", "ws2_32"])
 
-sources = Glob("gd_zedmd/*.cpp") + Glob("gd_zedmd/libzedmd/**/*.cpp") + Glob("gd_zedmd/libzedmd/third-party/include/miniz/*.c")
+sources = Glob("gd_zedmd/*.cpp") + Glob("libzedmd/**/*.cpp") + Glob("libzedmd/third-party/include/miniz/*.c")
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
