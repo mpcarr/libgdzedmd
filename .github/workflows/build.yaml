@@ -31,7 +31,7 @@ jobs:
 
     - name: Run Build Script
       run: |
-        scons platform=linux target=release
+        scons platform=linux
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3
