@@ -16,14 +16,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
       with:
-        submodules: true  # Ensures submodules are initialized and updated during checkout
-
-    - name: Verify Godot C++ Submodule
-      run: |
-        if [ ! -d "godot-cpp" ]; then
-          echo "Error: godot-cpp directory not found. Submodule may not be initialized."
-          exit 1
-        fi
+        submodules: true  # Automatically initializes and updates submodules
 
     - name: Install Dependencies
       run: |
