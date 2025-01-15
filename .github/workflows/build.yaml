@@ -37,6 +37,11 @@ jobs:
         scons platform=linux
         cd ..
 
+    - name: Run External Script
+      run: |
+        chmod +x libzedmd/platforms/linux/x64/external.sh
+        libzedmd/platforms/linux/x64/external.sh
+
     - name: Run Build Script
       run: |
         ls -l
