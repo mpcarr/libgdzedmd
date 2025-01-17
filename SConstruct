@@ -17,7 +17,7 @@ env = SConscript("godot-cpp/SConstruct")
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["gd_zedmd/", "libzedmd/third-party/include", "libzedmd/third-party/include/miniz"])
 env.Append(LIBS=["libzedmd/third-party/build-libs/win/x64/libserialport64.lib", "ws2_32"])
-env.Append(CXXFLAGS='-fexceptions')
+env.Append(CXXFLAGS=['-std=c++17', '-fexceptions'])
 
 sources = Glob("gd_zedmd/*.cpp") + Glob("libzedmd/**/*.cpp") + Glob("libzedmd/third-party/include/miniz/*.c")
 
