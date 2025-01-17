@@ -47,7 +47,7 @@ jobs:
     - name: Run Build Script
       run: |
         ls -l
-        scons platform=linux
+        scons CXXFLAGS="-std=c++17 -fexceptions" platform=linux
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3
