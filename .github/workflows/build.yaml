@@ -41,7 +41,7 @@ jobs:
       run: |
         chmod +x libzedmd/platforms/linux/x64/external.sh
         cd libzedmd
-        linux/x64/external.sh
+        platforms/linux/x64/external.sh
         cd ..
 
     - name: Run Build Script
